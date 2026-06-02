@@ -1,0 +1,18 @@
+# netlify.toml — place this in the project root (same level as package.json)
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+# Lets the function run a little longer, since live web research can take time.
+[functions]
+  node_bundler = "esbuild"
+
+# Optional: a tidy alias so the browser can call /api/screen instead of the
+# longer /.netlify/functions/screen path. The app code below uses the full
+# path, so this is just a convenience if you prefer /api/screen.
+[[redirects]]
+  from = "/api/screen"
+  to = "/.netlify/functions/screen"
+  status = 200
