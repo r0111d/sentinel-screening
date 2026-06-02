@@ -5,7 +5,7 @@
 // (2) extracting the largest valid JSON object even when wrapped in prose or
 // markdown, and (3) a single repair retry that asks the model to reformat to
 // pure JSON if the first pass can't be parsed.
-//
+// Rohit v1.1 - 02-June-2026
 // Key lives only here as env var GEMINI_API_KEY. Browser never sees it.
 
 const MODEL = "gemini-2.5-flash";
